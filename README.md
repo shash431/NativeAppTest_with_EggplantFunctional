@@ -12,9 +12,12 @@
 ![screencapture-wiki-linecorp-display-linefkqa-Test-Plan-Yuki-Automation-Test-with-Eggplant-2020-01-29-17_31_36](https://user-images.githubusercontent.com/25470405/77819703-2b71ec80-7120-11ea-91df-6a9049c5dffb.png)
 
 
-
 ## Demo
 ![ezgif com-resize (1)](https://user-images.githubusercontent.com/25470405/77819576-1fd1f600-711f-11ea-879d-9bdb7ab37847.gif)
 
 ## Script Description
 ![2020-03-28_18h10_47](https://user-images.githubusercontent.com/25470405/77819615-82c38d00-711f-11ea-8d4b-b71498b1e6c0.png)
+
+
+## Eggplant Functional 도입전 툴 조사
+![analysis](https://user-images.githubusercontent.com/25470405/77819744-81df2b00-7120-11ea-95af-a1389fad9e39.png)
