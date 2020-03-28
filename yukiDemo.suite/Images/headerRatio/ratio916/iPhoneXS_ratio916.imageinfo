@@ -1,0 +1,27 @@
+﻿{
+    CaptureDate = "2019-11-21 01:29:04 +0000";
+    CaptureHost = "iPhone_XS_LFK_5776";
+    CaptureScreenSize =     (
+        562,
+        1218
+    );
+    HasAlpha = 1;
+    HotSpotX = 17;
+    HotSpotY = 22;
+    IgnoreColor =     (
+        "#000000"
+    );
+    IgnoreColorTolerance =     (
+        100
+    );
+    ImageDescription = <>;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 221;
+    OriginalLocationY = 44;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    tags =     (
+    );
+}

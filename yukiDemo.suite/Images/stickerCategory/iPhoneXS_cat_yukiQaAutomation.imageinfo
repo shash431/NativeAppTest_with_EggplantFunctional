@@ -1,0 +1,22 @@
+﻿{
+    CaptureDate = "2019-11-21 05:26:39 +0000";
+    CaptureHost = "iPhone_XS_LFK_5776";
+    CaptureScreenSize =     (
+        1125,
+        2436
+    );
+    CropRectangle = "0,0,124,39";
+    HasAlpha = 1;
+    HotSpotX = 62;
+    HotSpotY = 21;
+    ImageDescription = <>;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 624;
+    OriginalLocationY = 2240;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    tags =     (
+    );
+}

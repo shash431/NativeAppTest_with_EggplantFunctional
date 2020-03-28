@@ -1,0 +1,17 @@
+﻿params stickerID
+
+If global DevicePlatform is "SC-03L"  
+	Tap (250, 240)
+	Log "INFO: Out Camera"
+	Tap (250, 240)
+	Log "INFO: In Camera"
+End If
+
+If global DevicePlatform is "iPhone11,2"  
+	Tap (900, 140)
+	Log "INFO: Out Camera"
+	Tap (900, 140)
+	Log "INFO: In Camera"
+End If
+
+LogSuccess stickerID  && "Success Switch Camera In/Out"

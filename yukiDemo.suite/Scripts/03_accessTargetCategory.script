@@ -1,0 +1,55 @@
+﻿wait 3
+
+put device of SutInfo() into global DevicePlatform
+put screensize of connectioninfo() into global screenSize
+
+set global AppList to ("iPhone11,2":"YukiCameraDemo", "SC-03L": "com.linecorp.yuki") // Platform별 App Info
+set global deviceIdentifier to ("SC-03L":"S10", "iPhone11,2":"iPhoneXS") // Device별 기기명 (식별자)
+set global devicePrefix to global deviceidentifier.(global DevicePlatform)
+//set the collectionfilter to (Name: devicePrefix)
+
+
+// 디바이스 플랫폼별 전역변수 정의
+If global DevicePlatform is "SC-03L" then set global imagePathFilePath to suiteInfo().path&"/Resources/sticker_information.xlsx"
+If global DevicePlatform is "iPhone11,2" then set global imagePathFilePath to suiteInfo().path&"/Resources/sticker_information.xlsx"
+
+// 디바이스 기종별 전역변수 정의 TODO 나중에 엑셀로 뺄것
+If  global devicePrefix is "S10"
+	set global categoryListDragAndDrop to (startPoint_x:800, startPoint_y:2015, endPoint_x:200, endPoint_y:2015) // 카테고리리스트 Swipe용 좌표
+	set global takePhotoLocation to (x:550, y:1950)  // 카메라 좌표
+	set global imagePathSheetName to global devicePrefix // 이미지패스 매핑용 시트명
+	set global stickerListDragAndDrop to (startPoint_x:550, startPoint_y:1878, endPoint_x:550, endPoint_y:1606) // 스티커리스트 Swipe용 좌표
+End If
+
+If  global devicePrefix is "iPhoneXS"
+	set global categoryListDragAndDrop to (startPoint_x:800, startPoint_y:2280, endPoint_x:200, endPoint_y:1140) 
+	set global takePhotoLocation to (x:550, y:2200) 
+	set global imagePathSheetName to global devicePrefix
+	set global stickerListDragAndDrop to (startPoint_x:550, startPoint_y:2080, endPoint_x:550, endPoint_y:1900)
+End If
+
+log "INFO: Device Name > "& global DeviceName && "/  Screen Size: "& global screenSize
+log "INFO: Device Platform > " & global DevicePlatform
+log "INFO: Device Brand > " & global devicePrefix
+log "INFO: APP > " &global AppList.(global DevicePlatform)
+// log "INFO: Key Image Path > "& global imagePathFilePath
+
+If global DevicePlatform is "iPhone11,2" then Tap (200,140)
+if global DevicePlatform is "SC-03L" then Tap (855,240)
+Run "HandlerForSticker/stickerListTap" // 스티커리스트 탭
+
+// 카테고리 스와이프
+if global DevicePlatform is "SC-03L"
+	DragAndDrop (global categoryListDragAndDrop.(startPoint_x), global categoryListDragAndDrop.(startPoint_y)), (global categoryListDragAndDrop.(endPoint_x), global categoryListDragAndDrop.(endPoint_y))
+	DragAndDrop (global categoryListDragAndDrop.(startPoint_x), global categoryListDragAndDrop.(startPoint_y)), (global categoryListDragAndDrop.(endPoint_x), global categoryListDragAndDrop.(endPoint_y))
+	wait 5
+	Tap (650, 2010)	
+end if
+
+if global DevicePlatform is "iPhone11,2"
+	repeat 3 times 
+		DragAndDrop (global categoryListDragAndDrop.(startPoint_x), global categoryListDragAndDrop.(startPoint_y)), (global categoryListDragAndDrop.(endPoint_x), global categoryListDragAndDrop.(endPoint_y))
+	end repeat
+	wait 3
+	Tap (920, 2280)
+end if

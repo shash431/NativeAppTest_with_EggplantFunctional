@@ -1,0 +1,27 @@
+﻿{
+    CaptureDate = "2019-11-19 01:58:10 +0000";
+    CaptureHost = "ios-yuki";
+    CaptureScreenSize =     (
+        1125,
+        2436
+    );
+    HasAlpha = 1;
+    HotSpotX = 39;
+    HotSpotY = 43;
+    IgnoreColor =     (
+        "#A19687"
+    );
+    IgnoreColorTolerance =     (
+        34
+    );
+    ImageDescription = <>;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 457;
+    OriginalLocationY = 234;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    tags =     (
+    );
+}

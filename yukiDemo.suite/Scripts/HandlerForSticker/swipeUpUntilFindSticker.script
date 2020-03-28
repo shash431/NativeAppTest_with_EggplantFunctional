@@ -1,0 +1,19 @@
+﻿params stickerID
+Set the SwipeSpeed to 80
+
+If global devicePrefix is "S10"
+	Repeat until ImageFound(text:stickerID, caseSensitive:Yes, contrast:on, waitFor:2, contrastColor:white)
+		SwipeUp the remoteScreenSize times .9
+		wait 2
+	end repeat
+End If
+
+If global devicePrefix is "iPhoneXS"
+	Set the SearchRectangle to (.01*global screenSize.x, .73*global screenSize.y, .99*global screenSize.x, .9*global screenSize.y)
+	Repeat until ImageFound(Image:"stickerThumbnail/" & sticker_id, caseSensitive:Yes, waitFor:10)
+		DragAndDrop (global stickerListDragAndDrop.(startPoint_x), global stickerListDragAndDrop.(startPoint_y)), (global stickerListDragAndDrop.(endPoint_x), global stickerListDragAndDrop.(endPoint_y))
+	end repeat
+	Set the SearchRectangle to empty
+End If
+
+

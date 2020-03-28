@@ -1,0 +1,16 @@
+﻿// sticker id에 해당하는 스티커 탭 (썸네일 이미지 검색)
+params sticker_id
+
+Run "HandlerForSticker/stickerListTap"
+
+Set the SearchRectangle to (.01*global screenSize.x, .73*global screenSize.y, .99*global screenSize.x, .9*global screenSize.y)
+log "INFO: Thumbnail image path > stickerThumbnail/" & sticker_id
+
+If ImageFound(Image:"stickerThumbnail/" & sticker_id, caseSensitive:Yes, waitFor:10)
+	Tap FoundImageLocation()
+	Tap (.5*global screenSize.x, .5*global screenSize.y) // sticker list 숨김
+else 
+	LogError "스티커 Thumbnail이 존재하지 않습니다"
+End If
+Set the SearchRectangle to empty
+

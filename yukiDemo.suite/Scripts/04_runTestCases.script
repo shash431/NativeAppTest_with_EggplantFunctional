@@ -1,0 +1,304 @@
+﻿Log "===== Test Category: " && global imagePathSheetName && "===== "
+
+// StickerID: 61609
+BeginTestCase  "61609-01 sticker verify"
+put "61609" into stickerID
+If global DevicePlatform is "SC-03L" then Run "HandlerForSticker/stickerTapByOCR" stickerID
+If global DevicePlatform is "iPhone11,2" then Run "HandlerForSticker/stickerTapByLocation" stickerID
+Run "HandlerForSticker/verifyStickerSingle" global devicePrefix & "_" & stickerID & "_a", global imagePathSheetName 
+EndTestCase "61609-01 sticker verify"
+
+BeginTestCase "61609-02 switch ratio"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/switchRatio" stickerID
+EndTestCase "61609-02 switch ratio"
+
+BeginTestCase "61609-03 take photo"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/takePhoto" stickerID
+EndTestCase "61609-03 take photo"
+
+BeginTestCase "61609-04 recordVideo"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/recordVideo" stickerID
+EndTestCase "61609-04 recordVideo"
+
+BeginTestCase "61609-05 camera IN/OUT"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/rotateCamera" stickerID
+EndTestCase "61609-05 camera IN/OUT"
+
+BeginTestCase "61609-06 sitch BG/FG"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/switchBgFg" stickerID
+EndTestCase "61609-06 sitch BG/FG"
+
+// StickerID: 62141
+BeginTestCase  "62141-01 sticker verify"
+put "62141" into stickerID
+Run "HandlerForSticker/stickerListTap"
+If global DevicePlatform is "SC-03L" then Run "HandlerForSticker/stickerTapByOCR" stickerID
+If global DevicePlatform is "iPhone11,2" then Run "HandlerForSticker/stickerTapByLocation" stickerID
+Run "HandlerForSticker/verifyStickerSingle" global devicePrefix & "_" & stickerID & "_a", global imagePathSheetName 
+EndTestCase "62141-01 sticker verify"
+
+BeginTestCase "62141-02 switch ratio"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/switchRatio" stickerID
+EndTestCase "62141-02 switch ratio"
+
+BeginTestCase "62141-03 take photo"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/takePhoto" stickerID
+EndTestCase "62141-03 take photo"
+
+BeginTestCase "62141-04 recordVideo"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/recordVideo" stickerID
+EndTestCase "62141-04 recordVideo"
+
+BeginTestCase "62141-05 camera IN/OUT"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/rotateCamera" stickerID
+EndTestCase "62141-05 camera IN/OUT"
+
+BeginTestCase "62141-06 sitch BG/FG"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/switchBgFg" stickerID
+EndTestCase "62141-06 sitch BG/FG"
+
+
+// StickerID: 61958 
+BeginTestCase  "61958-01 sticker verify"
+put "61958" into stickerID
+Run "HandlerForSticker/stickerListTap"
+If global DevicePlatform is "SC-03L" then Run "HandlerForSticker/stickerTapByOCR" stickerID
+If global DevicePlatform is "iPhone11,2" then Run "HandlerForSticker/stickerTapByLocation" stickerID
+Run "HandlerForSticker/verifyStickerSingle" global devicePrefix & "_" & stickerID & "_a", global imagePathSheetName 
+EndTestCase "61958-01 sticker verify"
+
+BeginTestCase "61958-02 switch ratio"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/switchRatio" stickerID
+EndTestCase "61958-02 switch ratio"
+
+BeginTestCase "61958-03 take photo"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/takePhoto" stickerID
+EndTestCase "61958-03 take photo"
+
+BeginTestCase "61958-04 recordVideo"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/recordVideo" stickerID
+EndTestCase "61958-04 recordVideo"
+
+BeginTestCase "61958-05 camera IN/OUT"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/rotateCamera" stickerID
+EndTestCase "61958-05 camera IN/OUT"
+
+BeginTestCase "61958-06 sitch BG/FG"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/switchBgFg" stickerID
+EndTestCase "61958-06 sitch BG/FG"
+
+
+// StickerID: 62638 
+BeginTestCase  "62638-01 sticker verify"
+put "62638" into stickerID
+Run "HandlerForSticker/stickerListTap"
+If global DevicePlatform is "SC-03L" then Run "HandlerForSticker/stickerTapByOCR" stickerID
+If global DevicePlatform is "iPhone11,2" then Run "HandlerForSticker/stickerTapByLocation" stickerID
+Run "HandlerForSticker/verifyStickerSingle" global devicePrefix & "_" & stickerID & "_a", global imagePathSheetName 
+EndTestCase "62638-01 sticker verify"
+
+BeginTestCase "62638-02 switch ratio"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/switchRatio" stickerID
+EndTestCase "62638-02 switch ratio"
+
+BeginTestCase "62638-03 take photo"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/takePhoto" stickerID
+EndTestCase "62638-03 take photo"
+
+BeginTestCase "62638-04 recordVideo"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/recordVideo" stickerID
+EndTestCase "62638-04 recordVideo"
+
+BeginTestCase "62638-05 camera IN/OUT"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/rotateCamera" stickerID
+EndTestCase "62638-05 camera IN/OUT"
+
+BeginTestCase "62638-06 sitch BG/FG"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/switchBgFg" stickerID
+EndTestCase "62638-06 sitch BG/FG"
+
+
+// StickerID: 60847 
+BeginTestCase  "60847-01 sticker verify"
+put "60847" into stickerID
+Run "HandlerForSticker/stickerListTap"
+If global DevicePlatform is "SC-03L" then Run "HandlerForSticker/stickerTapByOCR" stickerID
+If global DevicePlatform is "iPhone11,2" then Run "HandlerForSticker/stickerTapByLocation" stickerID
+Run "HandlerForSticker/verifyStickerSingle" global devicePrefix & "_" & stickerID & "_a", global imagePathSheetName 
+EndTestCase "60847-01 sticker verify"
+
+BeginTestCase "60847-02 switch ratio"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/switchRatio" stickerID
+EndTestCase "60847-02 switch ratio"
+
+BeginTestCase "60847-03 take photo"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/takePhoto" stickerID
+EndTestCase "60847-03 take photo"
+
+BeginTestCase "60847-04 recordVideo"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/recordVideo" stickerID
+EndTestCase "60847-04 recordVideo"
+
+BeginTestCase "60847-05 camera IN/OUT"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/rotateCamera" stickerID
+EndTestCase "60847-05 camera IN/OUT"
+
+BeginTestCase "60847-06 sitch BG/FG"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/switchBgFg" stickerID
+EndTestCase "60847-06 sitch BG/FG"
+
+
+// ###############
+BeginTestCase  "60763-01 sticker verify"
+put "60763" into stickerID
+Run "HandlerForSticker/stickerListTap"
+If global DevicePlatform is "SC-03L" 
+	Run "HandlerForSticker/swipeUpUntilFindSticker" stickerID
+	Run "HandlerForSticker/stickerTapByOCR" stickerID
+end if
+if global DevicePlatform is "iPhone11,2" then Run "HandlerForSticker/stickerTapByLocation" stickerID
+Run "HandlerForSticker/verifyStickerSingle" global devicePrefix & "_" & stickerID & "_a", global imagePathSheetName 
+EndTestCase "60763-01 sticker verify"
+
+BeginTestCase "60763-02 switch ratio"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/switchRatio" stickerID
+EndTestCase "60763-02 switch ratio"
+
+BeginTestCase "60763-03 take photo"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/takePhoto" stickerID
+EndTestCase "60763-03 take photo"
+
+BeginTestCase "60763-04 recordVideo"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/recordVideo" stickerID
+EndTestCase "60763-04 recordVideo"
+
+BeginTestCase "60763-05 camera IN/OUT"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/rotateCamera" stickerID
+EndTestCase "60763-05 camera IN/OUT"
+
+BeginTestCase "60763-06 sitch BG/FG"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/switchBgFg" stickerID
+EndTestCase "60763-06 sitch BG/FG"
+
+
+// StickerID: 60143 
+BeginTestCase  "60143-01 sticker verify"
+put "60143" into stickerID
+Run "HandlerForSticker/stickerListTap"
+If global DevicePlatform is "SC-03L" then Run "HandlerForSticker/stickerTapByOCR" stickerID
+If global DevicePlatform is "iPhone11,2" then Run "HandlerForSticker/stickerTapByLocation" stickerID
+Run "HandlerForSticker/verifyStickerSingle" global devicePrefix & "_" & stickerID & "_a", global imagePathSheetName 
+EndTestCase "60143-01 sticker verify"
+
+BeginTestCase "60143-02 switch ratio"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/switchRatio" stickerID
+EndTestCase "60143-02 switch ratio"
+
+BeginTestCase "60143-03 take photo"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/takePhoto" stickerID
+EndTestCase "60143-03 take photo"
+
+BeginTestCase "60143-04 recordVideo"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/recordVideo" stickerID
+EndTestCase "60143-04 recordVideo"
+
+BeginTestCase "60143-05 camera IN/OUT"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/rotateCamera" stickerID
+EndTestCase "60143-05 camera IN/OUT"
+
+BeginTestCase "60143-06 sitch BG/FG"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/switchBgFg" stickerID
+EndTestCase "60143-06 sitch BG/FG"
+
+
+// StickerID: 60844 
+BeginTestCase  "60844-01 sticker verify"
+put "60844" into stickerID
+Run "HandlerForSticker/stickerListTap"
+If global DevicePlatform is "SC-03L" then Run "HandlerForSticker/stickerTapByOCR" stickerID
+If global DevicePlatform is "iPhone11,2" then Run "HandlerForSticker/stickerTapByLocation" stickerID
+Run "HandlerForSticker/verifyStickerSingle" global devicePrefix & "_" & stickerID & "_a", global imagePathSheetName 
+EndTestCase "60844-01 sticker verify"
+
+BeginTestCase "60844-02 switch ratio"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/switchRatio" stickerID
+EndTestCase "60844-02 switch ratio"
+
+BeginTestCase "60844-03 take photo"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/takePhoto" stickerID
+EndTestCase "60844-03 take photo"
+
+BeginTestCase "60844-04 recordVideo"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/recordVideo" stickerID
+EndTestCase "60844-04 recordVideo"
+
+BeginTestCase "60844-05 camera IN/OUT"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/rotateCamera" stickerID
+EndTestCase "60844-05 camera IN/OUT"
+
+BeginTestCase "60844-06 sitch BG/FG"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/switchBgFg" stickerID
+EndTestCase "60844-06 sitch BG/FG"
+
+
+// StickerID: 61771 
+BeginTestCase  "61771-01 sticker verify"
+put "61771" into stickerID
+Run "HandlerForSticker/stickerListTap"
+If global DevicePlatform is "SC-03L" then Run "HandlerForSticker/stickerTapByOCR" stickerID
+If global DevicePlatform is "iPhone11,2" then Run "HandlerForSticker/stickerTapByLocation" stickerID
+Run "HandlerForSticker/verifyStickerSingle" global devicePrefix & "_" & stickerID & "_a", global imagePathSheetName 
+EndTestCase "61771-01 sticker verify"
+
+BeginTestCase "61771-02 switch ratio"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/switchRatio" stickerID
+EndTestCase "61771-02 switch ratio"
+
+BeginTestCase "61771-03 take photo"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/takePhoto" stickerID
+EndTestCase "61771-03 take photo"
+
+BeginTestCase "61771-04 recordVideo"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/recordVideo" stickerID
+EndTestCase "61771-04 recordVideo"
+
+BeginTestCase "61771-05 camera IN/OUT"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/rotateCamera" stickerID
+EndTestCase "61771-05 camera IN/OUT"
+
+BeginTestCase "61771-06 sitch BG/FG"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/switchBgFg" stickerID
+EndTestCase "61771-06 sitch BG/FG"
+
+
+// StickerID: 61800
+BeginTestCase  "61800-01 sticker verify"
+put "61800" into stickerID
+Run "HandlerForSticker/stickerListTap"
+If global DevicePlatform is "SC-03L" then Run "HandlerForSticker/stickerTapByOCR" stickerID
+If global DevicePlatform is "iPhone11,2" then Run "HandlerForSticker/stickerTapByLocation" stickerID
+Run "HandlerForSticker/verifyStickerSingle" global devicePrefix & "_" & stickerID & "_a", global imagePathSheetName 
+EndTestCase "61800-01 sticker verify"
+
+BeginTestCase "61800-02 switch ratio"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/switchRatio" stickerID
+EndTestCase "61800-02 switch ratio"
+
+BeginTestCase "61800-03 take photo"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/takePhoto" stickerID
+EndTestCase "61800-03 take photo"
+
+BeginTestCase "61800-04 recordVideo"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/recordVideo" stickerID
+EndTestCase "61800-04 recordVideo"
+
+BeginTestCase "61800-05 camera IN/OUT"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/rotateCamera" stickerID
+EndTestCase "61800-05 camera IN/OUT"
+
+BeginTestCase "61800-06 sitch BG/FG"
+If global DevicePlatform is "SC-03L" then Run "HandlerForDeviceControl/switchBgFg" stickerID
+EndTestCase "61800-06 sitch BG/FG"
+
+killapp (global AppList.(global DevicePlatform))
+

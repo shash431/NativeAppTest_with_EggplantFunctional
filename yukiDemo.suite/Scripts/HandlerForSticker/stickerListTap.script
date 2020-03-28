@@ -1,0 +1,4 @@
+﻿// Device별로 Sticker List 좌표정의 후 탭
+If global devicePrefix is "S10" then set stickerListLocation to (x:100, y:1940)
+If global devicePrefix is "iPhoneXS" then set stickerListLocation to (x:190, y:2100)
+Tap (stickerListLocation.x, stickerListLocation.y)

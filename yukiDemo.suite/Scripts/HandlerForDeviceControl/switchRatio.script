@@ -1,0 +1,89 @@
+﻿params stickerID
+
+If global DevicePlatform is "SC-03L"
+	repeat 3 times
+		Tap (400,240)
+	end repeat
+	LogSuccess stickerID  && "Success switch ratio 3:4>1;1>9:16"
+End If
+
+If global DevicePlatform is "iPhone11,2" 
+	LogSuccess stickerID  && "Success switch ratio 3:4>1;1>9:16"
+End If
+
+(*
+If global DevicePlatform is "iPhone11,2"
+	Tap (480, 130)
+	Tap (490, 270) 
+	Tap (620, 270)
+	Tap (740, 270) 
+	Tap (480, 130)
+End If
+
+
+If global DevicePlatform is "Android"
+	Tap (400,240) // Case 916 탭
+	If ImageFound(Image:"footerFilterList/S10_filter_list_mono_white", watiFor:3)
+		Log "INFO: 화면비율: 3:4"
+		Put "Success" into ratio34Result
+	else
+		Log "3:4 비율변경 실패"
+	End If
+	
+	Tap (400,240) // Case 34 탭
+	If ImageFound(image:"footerCamera/S10_image_selected_white", watiFor:3)
+		Log "INFO: 화면비율: 1:1"
+		Put "Success" into ratio11Result
+	Else
+		Log "1:1 비율변경 실패"
+	End If
+	
+	Tap (400,240) // Case 11 탭
+	wait 2
+	If not ImageFound(Image:"footerFilterList/S10_filter_list_mono_white", watiFor:3)
+		Log "INFO: 화면비율:9:16"
+		Put "Success" into ratio916Result
+	else
+		Log "9:16 비율변경 실패"
+	End If
+End If
+
+
+If global DevicePlatform is "iPhone11,2"
+	Tap "headerRatio" // Case 916 탭
+	Tap (490, 270) // Case 11 탭
+	If ImageFound(Image:"footerFilterList/iPhoneXS_filter_list_black", caseSensitive:Yes, watiFor:2)
+		Log "INFO: 화면비율: 3:4"
+		Put "Success" into ratio34Result
+	else
+		Log "1:1  비율변경 실패"
+	End If
+	
+	Tap (620, 270) // Case 34 탭
+	If ImageFound(Image:"footerFilterList/iPhoneXS_filter_list_black", caseSensitive:Yes, watiFor:2)
+		Log "INFO: 화면비율: 1:1"
+		Put "Success" into ratio11Result
+	Else
+		Log "3:4 비율변경 실패"
+	End If
+	
+	Tap (740, 270) // Case 916 탭
+	wait  2 // 화면비율 변경되기까지 애니메이션효과가 있으므로 효과종료까지 대기하기 위해 어쩔수없이 씀
+	If not ImageFound(Image:"footerFilterList/iPhoneXS_filter_list_black", caseSensitive:Yes, watiFor:2)
+		Log "INFO: 화면비율: 9:16"
+		Put "Success" into ratio916Result
+	Else
+		Log "9:16비율변경 실패"
+	End If
+	
+	Tap "headerRatio" // Case 916 탭
+End If
+
+// 결과판정
+If ratio34Result  is "Success" and ratio34Result  is "Success" and ratio11Result is "Success" and ratio916Result is "Success" 
+	LogSuccess "Case2)" & stickerID & "비율변경 성공"
+Else
+	LogError "Case2)" & stickerID & "비율변경 실패"
+End If
+
+*)

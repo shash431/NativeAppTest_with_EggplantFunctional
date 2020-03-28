@@ -1,0 +1,11 @@
+﻿
+LaunchApp global AppList.(global DevicePlatform)
+wait 3
+If global DevicePlatform is "SC-03L"  then Tap image:"AppIconYukiDemo/Cameralntegration", waitfor:3
+
+(*// 디바이스 권한 허가(최초실행시)
+If imageFound(Text:"許可", Language:"Japanese", waitfor:2, Contrast:On) then
+	repeat 2 times
+		Tap FoundImageLocation()
+	end repeat
+End If*)

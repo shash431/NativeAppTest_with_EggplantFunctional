@@ -1,0 +1,20 @@
+﻿{
+    CaptureDate = "2019-12-23 01:01:06 +0000";
+    CaptureHost = "Galaxy_S10_LFK_5805";
+    CaptureScreenSize =     (
+        1080,
+        2280
+    );
+    HasAlpha = 1;
+    HotSpotX = 39;
+    HotSpotY = 38;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 159;
+    OriginalLocationY = 1545;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    tags =     (
+    );
+}

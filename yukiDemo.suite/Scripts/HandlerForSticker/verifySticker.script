@@ -1,0 +1,28 @@
+﻿params stickerID_a, stickerID_b, imagePathSheetName
+
+Log "INFO: 첫번째 Key Image>" & utils.returnStickerImageFilePath(stickerID_a, imagePathSheetName)
+//1. verify Sticker
+repeat 5 times
+	if imageFound(Image:utils.returnStickerImageFilePath(stickerID_a, imagePathSheetName), caseSensitive:Yes, WaitFor:7) 
+		Log "첫번째 key image 검출 성공"
+		Put "OK" into keyImage1
+		Exit Repeat
+	end if
+end repeat
+
+Log "INFO: 두번째 Key Image>" & utils.returnStickerImageFilePath(stickerID_b, imagePathSheetName)
+//2. verify Sticker 2
+repeat 5 times
+	if imageFound(Image:utils.returnStickerImageFilePath(stickerID_b, imagePathSheetName), caseSensitive:Yes, WaitFor:7) 
+		Log "두번째 key image 검출 성공"
+		Put "OK" into keyImage2
+		Exit Repeat
+	end if
+end repeat
+
+// 스티커적용 결과판정
+If keyImage1  is "OK" and keyImage2  is "OK"
+	LogSuccess "Case1) successs"
+else 
+	LogError "Case1) Fail"
+end if

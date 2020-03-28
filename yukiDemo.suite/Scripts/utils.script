@@ -1,0 +1,11 @@
+﻿
+// execl 파일에서 sticker결과판정 이미지 패스 취득
+function returnStickerImageFilePath stickerID, imagePathSheetName
+	set stickerDB to (type:"excel", file:global ImagePathFilePath, name:imagePathSheetName)
+	set stickerInfo to the records of stickerDB
+	repeat with each item record of stickerInfo
+		if record's stickerID is stickerID then
+			return record's imageFile
+		end if
+	end repeat
+end returnStickerImageFilePath

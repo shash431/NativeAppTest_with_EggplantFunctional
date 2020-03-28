@@ -1,0 +1,16 @@
+﻿params stickerID, imagePathSheetName
+
+Log "INFO: Key Image path >" & utils.returnStickerImageFilePath(stickerID, imagePathSheetName)
+
+repeat 10 times
+	if imageFound(Image:utils.returnStickerImageFilePath(stickerID, imagePathSheetName), WaitFor:7) 
+		put "success" into stickerApplied
+		Exit Repeat
+	end if
+end repeat
+
+if stickerApplied is "success"
+	LogSuccess "===== Sticker:  " && stickerID && " apply [Success] =====" 
+else 
+	LogError "===== Sticker:  " && stickerID && " apply []Fail] =====" 
+end if

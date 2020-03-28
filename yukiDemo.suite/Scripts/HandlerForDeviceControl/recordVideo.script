@@ -1,0 +1,34 @@
+﻿params stickerID
+
+If global DevicePlatform is "SC-03L" 
+	Tap (650, 1745)
+	wait 1
+	Tap (global takePhotoLocation.x, global takePhotoLocation.y)
+	wait 3
+	Tap (global takePhotoLocation.x, global takePhotoLocation.y)
+	Tap (450, 1745)
+	LogSuccess  stickerID && "Success Record Video "
+End If
+
+If global DevicePlatform is "iPhone11,2" 
+	LogSuccess  stickerID && "Success Record Video "
+End If
+
+
+(*
+If global DevicePlatform is "SC-03L" 
+	if ImageFound(Text:"VIDEO", contrast:on, caseSensitive:Yes, waitFor:10)
+		Tap FoundImageLocation()
+	end if
+	wait 1
+	Tap (global takePhotoLocation.x, global takePhotoLocation.y)
+	wait 3
+	Tap (global takePhotoLocation.x, global takePhotoLocation.y)
+	
+	if ImageFound(Text:"IMAGE", contrast:on, caseSensitive:Yes, waitFor:10)
+		Tap FoundImageLocation()
+	end if
+	LogSuccess  stickerID && "Success Record Video "
+End If
+
+*)

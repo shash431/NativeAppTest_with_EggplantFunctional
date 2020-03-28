@@ -1,0 +1,13 @@
+﻿params stickerID
+
+PressHomeButton // App Background
+Log "INFO: App Background"
+LaunchApp global AppList.(global DevicePlatform) // App Foreground
+Log "INFO: App Foreground"
+
+wait 2
+If global DevicePlatform is "SC-03L" 
+	Tap (860,240) // 영상재생버튼 탭
+End If
+
+LogSuccess stickerID  && " sitch App BG/FG"

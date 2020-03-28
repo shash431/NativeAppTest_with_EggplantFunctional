@@ -1,0 +1,14 @@
+﻿// sticker id에 해당하는 스티커 탭 (OCR검색)
+params sticker_id
+
+Set the SearchRectangle to (20, 1570, 1060, 1970)
+If ImageFound(Text:sticker_id, contrast:on, caseSensitive:Yes, waitFor:10, contrastColor:White)
+	wait 1
+	Tap FoundImageLocation()
+	wait 1
+	PressBackButton
+else 
+	LogError "sticker ID not found"
+end if
+set the searchRectangle to empty
+

@@ -1,0 +1,28 @@
+﻿{
+    CaptureDate = "2019-10-15 08:46:20 +0000";
+    CaptureHost = "10.33.96.43";
+    CaptureScreenSize =     (
+        1080,
+        2280
+    );
+    HasAlpha = 1;
+    HotSpotX = 121;
+    HotSpotY = 40;
+    IgnoreColor =     (
+        "#AECCD1"
+    );
+    IgnoreColorTolerance =     (
+        38
+    );
+    ImageDescription = <>;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 528;
+    OriginalLocationY = 1708;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchAlgorithm = TextSmoothSquare;
+    tags =     (
+    );
+}

@@ -1,0 +1,36 @@
+﻿params stickerID
+
+If global DevicePlatform is "SC-03L" 
+	Tap (global takePhotoLocation.x, global takePhotoLocation.y)
+	LogSuccess stickerID & "Success Take Photo"
+End If 
+
+If global DevicePlatform is "iPhone11,2"
+	LogSuccess stickerID & "Success Take Photo"
+End If
+
+
+(*If global DevicePlatform is "Android"
+	// 결과 판정
+	if ImageFound(Text:"Success", caseSensitive:Yes,  contrast:on, waitfor:3)
+		LogSuccess "Case3)" & stickerID & "사진촬영 성공"
+	else 
+		LogError "Case3)" & stickerID & "사진촬영 실패"
+	end if
+End If
+
+If global DevicePlatform is "iPhone11,2"
+	wait 2
+	Tap (.5*global screenSize.x, .5*global screenSize.y) // 다운로드 버튼 표시
+	wait 2
+	Tap (352, 2178) //  다운로드 버튼 탭 
+	wait 2
+	Tap (765, 1350) // OK 버튼 탭
+	If imagefound(Text:"Success", caseSensitive:Yes,  contrast:on, waitfor:3) 
+		LogSuccess "Case3)" & stickerID && "사진촬영 성공"
+	End If
+	Tap (550, 1330) // Success다이얼로그 OK button
+	wait 2
+	Tap (100, 220) // Close button
+End If
+*)

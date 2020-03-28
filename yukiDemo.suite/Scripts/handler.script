@@ -1,0 +1,149 @@
+﻿// 스티커 적용여부 판정
+to verifyStickerSingle given stickerID_a, imagePathSheetName
+	Log "INFO: Key Image path >" & utils.returnStickerImageFilePath(stickerID_a, imagePathSheetName)
+	
+	repeat 5 times
+		if imageFound(Image:utils.returnStickerImageFilePath(stickerID_a, imagePathSheetName), caseSensitive:Yes, WaitFor:7) 
+			put "success" into stickerApplied
+			Exit Repeat
+		end if
+	end repeat
+	
+	if stickerApplied is "success"
+		LogSuccess "Case1)" & stickerID_a && "successs"
+	else 
+		LogError "Case1)" & stickerID_a && "successs"
+	end if
+end verifyStickerSingle
+
+// sticker id에 해당하는 sticker ID OCR검색 (Android)
+to stickerTapByOCR given sticker_id
+
+	Set the SearchRectangle to (20, 1570, 1060, 1970)
+	If ImageFound(Text:sticker_id, contrast:on, caseSensitive:Yes, waitFor:10, contrastColor:White)
+		wait 1
+		Tap FoundImageLocation()
+		wait 1
+		PressBackButton
+	else 
+		LogError "sticker ID not found"
+	end if
+	set the searchRectangle to empty
+end stickerTapByOCR
+
+// sticker id에 해당하는 썸네일 이미지 검색  (iOS)
+to stickerTapByImage given sticker_id
+	log "INFO: Thumbnail 이미지 패스 > stickerThumbnail/" & sticker_id
+	stickerListTap
+	Set the SearchRectangle to (.01*global screenSize.x, .73*global screenSize.y, .99*global screenSize.x, .9*global screenSize.y)
+	If ImageFound(Image:"stickerThumbnail/" & sticker_id, caseSensitive:Yes, waitFor:10)
+		Tap FoundImageLocation()
+		Tap (.5*global screenSize.x, .5*global screenSize.y) // sticker list 숨김
+	else 
+		LogError "스티커 Thumbnail이 not"
+	End If
+	Set the SearchRectangle to empty
+end stickerTapByImage
+
+// sticker 찾을때까지 스와이프
+to swipeUpUntilFindSticker given stickerID
+	Set the SwipeSpeed to 80	
+	If global devicePrefix is "S10"
+		Repeat until ImageFound(text:stickerID, caseSensitive:Yes, contrast:on, waitFor:2, contrastColor:white)
+			SwipeUp the remoteScreenSize times .9
+			wait 2
+		end repeat
+	End If
+	
+	If global devicePrefix is "iPhoneXS"
+		Set the SearchRectangle to (.01*global screenSize.x, .73*global screenSize.y, .99*global screenSize.x, .9*global screenSize.y)
+		Repeat until ImageFound(Image:"stickerThumbnail/" & sticker_id, caseSensitive:Yes, waitFor:10)
+			DragAndDrop (global stickerListDragAndDrop.(startPoint_x), global stickerListDragAndDrop.(startPoint_y)), (global stickerListDragAndDrop.(endPoint_x), global stickerListDragAndDrop.(endPoint_y))
+		end repeat
+		Set the SearchRectangle to empty
+	End If
+end swipeUpUntilFindSticker
+
+// 스티커리스트 탭
+to stickerListTap
+	If global devicePrefix is "S10" then set stickerListLocation to (x:100, y:1940)
+	If global devicePrefix is "iPhoneXS" then set stickerListLocation to (x:190, y:2100)
+	Tap (stickerListLocation.x, stickerListLocation.y)
+end stickerListTap
+
+// 좌표로 스티커 탭 (iOS)
+to stickerTapByLocation given stickerID
+	if sticker_id is "61609"
+		Tap (120, 1900)
+		Tap (.5*global screenSize.x, .5*global screenSize.y)
+	end if
+	if sticker_id is "62141"
+		Tap (340, 1900)
+		Tap (.5*global screenSize.x, .5*global screenSize.y)
+	end if
+	if sticker_id is "61958"
+		Tap (560, 1900)
+		Tap (.5*global screenSize.x, .5*global screenSize.y)
+	end if
+	if sticker_id is "61958"
+		Tap (780, 1900)
+		Tap (.5*global screenSize.x, .5*global screenSize.y)
+	end if
+	if sticker_id is "61958"
+		Tap (1000, 1900)
+		Tap (.5*global screenSize.x, .5*global screenSize.y)
+	end if
+	##########
+	if sticker_id is "60763"
+		Tap (120, 1900)
+		Tap (.5*global screenSize.x, .5*global screenSize.y)
+	end if
+	if sticker_id is "60143"
+		Tap (340, 1900)
+		Tap (.5*global screenSize.x, .5*global screenSize.y)
+	end if
+	if sticker_id is "60844"
+		Tap (560, 1900)
+		Tap (.5*global screenSize.x, .5*global screenSize.y)
+	end if
+	if sticker_id is "61771"
+		Tap (780, 1900)
+		Tap (.5*global screenSize.x, .5*global screenSize.y)
+	end if
+	if sticker_id is "61800"
+		Tap (1000, 1900)
+		Tap (.5*global screenSize.x, .5*global screenSize.y)
+	end if
+end stickerTapByLocation
+
+// 화면비율변경
+to switchRatio
+	If global DevicePlatform is "SC-03L"
+		repeat 3 times
+			Tap (400,240)
+		end repeat
+	End If
+	
+	If global DevicePlatform is "iPhone11,2"
+		Tap "headerRatio" // Case 916 탭
+		Tap (490, 270) 
+		Tap (620, 270)
+		Tap (740, 270) 
+		Tap "headerRatio"
+	End If
+	LogSuccess "Case2)" & stickerID  && "비율변경 성공"
+end switchRatio
+
+// app Bg/Fg
+to appBgFg given stickerID
+	PressHomeButton // App Background
+	Log "INFO: App Background"
+	LaunchApp global AppList.(global DevicePlatform) // App Foreground
+	wait 2
+	If global DevicePlatform is "SC-03L" 
+		Tap (860,240) // 영상재생버튼 탭
+	End If
+	Log "INFO: App Foreground"
+	// 결과판정
+	LogSuccess "Case5)" & stickerID  && " BG/FG 전환 성공"
+end appBgFg

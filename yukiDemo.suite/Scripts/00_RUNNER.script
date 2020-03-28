@@ -1,0 +1,9 @@
+﻿
+Run "01_EnvSetup"
+Run "02_launchCamera"
+Run "03_accessTargetCategory"
+Run "04_runTestCases"
+
+LogSuccess "Test all pass"
+
+

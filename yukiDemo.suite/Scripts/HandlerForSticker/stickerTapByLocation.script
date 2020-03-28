@@ -1,0 +1,45 @@
+﻿params sticker_id
+
+if sticker_id is "61609"
+	Tap (120, 1900)
+	Tap (.5*global screenSize.x, .5*global screenSize.y)
+end if
+if sticker_id is "62141"
+	Tap (340, 1900)
+	Tap (.5*global screenSize.x, .5*global screenSize.y)
+end if
+if sticker_id is "61958"
+	Tap (560, 1900)
+	Tap (.5*global screenSize.x, .5*global screenSize.y)
+end if
+if sticker_id is "62638"
+	Tap (780, 1900)
+	Tap (.5*global screenSize.x, .5*global screenSize.y)
+end if
+if sticker_id is "60847"
+	Tap (1000, 1900)
+	Tap (.5*global screenSize.x, .5*global screenSize.y)
+end if
+
+##########
+
+if sticker_id is "60763"
+	Tap (120, 2090)
+	Tap (.5*global screenSize.x, .5*global screenSize.y)
+end if
+if sticker_id is "60143"
+	Tap (340, 2090)
+	Tap (.5*global screenSize.x, .5*global screenSize.y)
+end if
+if sticker_id is "60844"
+	Tap (560, 2090)
+	Tap (.5*global screenSize.x, .5*global screenSize.y)
+end if
+if sticker_id is "61771"
+	Tap (780, 2090)
+	Tap (.5*global screenSize.x, .5*global screenSize.y)
+end if
+if sticker_id is "61800"
+	Tap (1000, 2090)
+	Tap (.5*global screenSize.x, .5*global screenSize.y)
+end if
