@@ -6,12 +6,12 @@
 ## Test Flow
 
 1. 스티커 적용여부 판단 key image를 캡쳐
-
-![2020-03-28_17h57_37](https://user-images.githubusercontent.com/25470405/77819363-a554a680-711d-11ea-8516-8184cc053255.png)
-
 2. 화면에 key image 표시여부로 스티커 적용 Pass/Fail 판단
 
-![screencapture-wiki-linecorp-display-linefkqa-Test-Plan-Yuki-Automation-Test-with-Eggplant-2020-01-29-17_31_36](https://user-images.githubusercontent.com/25470405/77819672-fcf41180-711f-11ea-9eec-387e7d6411d6.png)
+![2020-03-28_17h57_37](https://user-images.githubusercontent.com/25470405/77819363-a554a680-711d-11ea-8516-8184cc053255.png)
+![screencapture-wiki-linecorp-display-linefkqa-Test-Plan-Yuki-Automation-Test-with-Eggplant-2020-01-29-17_31_36](https://user-images.githubusercontent.com/25470405/77819703-2b71ec80-7120-11ea-91df-6a9049c5dffb.png)
+
+
 
 ## Demo
 ![ezgif com-resize (1)](https://user-images.githubusercontent.com/25470405/77819576-1fd1f600-711f-11ea-879d-9bdb7ab37847.gif)
